@@ -1,7 +1,7 @@
 import stringsarrays
 import linkedlists as ll
 from stacksqueues import Stack, StackNode, SetOfStacks, MyQueue, SortStack
-
+from treesgraphs import Graph
 
 def main():
     # print(stringsarrays.zeroMatrix([[1,2,3,0],[5,6,7,8],[9,10,11,12],[13,14,15,16]]))
@@ -86,7 +86,15 @@ def main():
     sor.push(4)
     sor.s2.print_stack()
     '''
-
-
+    graph = Graph(6)
+    graph.add_edge(0, 1)
+    graph.add_edge(0, 5)
+    graph.add_edge(0, 4)
+    graph.add_edge(1, 3)
+    graph.add_edge(1, 4)
+    graph.add_edge(2, 1)
+    graph.add_edge(3, 2)
+    graph.add_edge(3, 4)
+    print(graph.route_between_nodes(0, 3))
 
 main()
